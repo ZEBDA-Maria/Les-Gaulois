@@ -13,7 +13,7 @@ public class Gaulois {
 		return nom;
 	}
 
-	public static void parler(String texte) {
+	public  void parler(String texte) {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 
@@ -23,17 +23,17 @@ public class Gaulois {
 
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-		romain.recevoirCoup(force / 3);
+		romain.recevoirCoup(force / 3* effetPotion);
 	}
     
 	@Override
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
 	}
-	public void boirePotion(int forcePotion) {
+	public void boirePotion (int forcePotion) {
 		int forcePortion = 1;
 		effetPotion =forcePortion ;
-		Gaulois.parler("Merci Druide, je sens que ma force est" +forcePotion+ "fois décuplée");
+		parler("Merci Druide, je sens que ma force est" +forcePotion+ "fois décuplée");
 				
 	}
 
@@ -41,10 +41,19 @@ public class Gaulois {
 		Gaulois asterix = new Gaulois ("Astérix",8);
 		System.out.println(asterix.getNom());
 		asterix.prendreParole();
-		asterix.parler("Bonjour");
-		asterix.frapper(Minus +" envoie un grand coup dans la mâchoire de "+romain.getNom());
-		asterix.boirePotion();
+		
+		asterix.boirePotion(3);
+	}
+
+	public static void main (String[] args) {
+		Gaulois Obélix = new Gaulois ("Obélix",8);
+		System.out.println(Obélix.getNom());
+		Obélix.boirePotion(3);
+	}
+	
+		
+		
 	}
 	
 
-}
+
