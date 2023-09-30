@@ -7,14 +7,16 @@ public class Scenario {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	Gaulois asterix =new Gaulois ("asterix",8);
-	Gaulois ob =new Gaulois("Obelix",25);
+	Gaulois Obélix =new Gaulois("Obélix",25);
 	Romain Minus =new Romain("Minus",6);
+	Druide Panoramix =new Druide ("Panoramix",5,10);
 	
 	
 	
 	
-    Panoramix.prendreParole(" Bonjour, je suis le druide Panoramix et ma potion peut aller d'une force 5 à 10");
-	Panoramix.prendreParole("Je vais aller préparer une petite potion...");
+	
+    Panoramix.parler(" Bonjour, je suis le druide Panoramix et ma potion peut aller d'une force 5 à 10");
+	Panoramix.parler("Je vais aller préparer une petite potion...");
     Panoramix.preparerPotion();
     Panoramix.booster(Obélix);
     Obélix.parler(" Par Bélénos, ce n'est pas juste !");
