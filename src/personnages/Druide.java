@@ -1,4 +1,5 @@
 package personnages;
+
 import personnages.Gaulois;
 import java.util.*;
 
@@ -7,15 +8,15 @@ public class Druide {
 	private int effetPotionMin;
 	private int effetPotionMax;
 	private int forcePotion = 1;
-	
+
 	
 	public void booster(Gaulois gaulois) {
-		if (gaulois==Obélix) {
-			parler("Non, Obélix !... Tu n’auras pas de potion magique ! ");}
-		else {
-		boirePotion(gaulois);
+		if (gaulois.equals("Obélix")){//(gaulois.getNom() == "Obélix") {
+			parler("Non, Obélix !... Tu n’auras pas de potion magique ! ");
+		} else {
+			gaulois.boirePotion( );
 		}
-		
+
 	}
 
 	public Druide(String nom, int effetPotionMin, int effetPotionMax) {
@@ -56,7 +57,6 @@ public class Druide {
 		Druide Panoramix = new Druide("Panoramix", 5, 10);
 		System.out.println(Panoramix.getNom());
 		Panoramix.preparerPotion();
-		
 
 	}
 }
